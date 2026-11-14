@@ -2,6 +2,7 @@
 import "../styles/site.css";
 
 const repo = "https://github.com/tanveersultan53/worklio";
+const sponsor = "https://github.com/sponsors/tanveersultan53";
 const year = new Date().getFullYear();
 
 const areas = [
@@ -71,6 +72,7 @@ const areas = [
         <a href="/docs/">Docs</a>
         <a href="/docs/self-hosting/deployment/">Self-hosting</a>
         <a href="/docs/contributing/">Contribute</a>
+        <a class="sponsor" href={sponsor}><span aria-hidden="true">♥</span> Sponsor</a>
         <a class="gh" href={repo}>GitHub</a>
       </nav>
     </header>
@@ -212,12 +214,26 @@ cd frontend && npm install && npm run dev
           <li><a href="/docs/contributing/governance/">Governance</a></li>
         </ul>
       </section>
+
+      <section class="support" aria-labelledby="support-title">
+        <h2 id="support-title">Keep Worklio free and independent</h2>
+        <p>
+          Worklio has no investors and no seat fees. <strong>Sponsors pay for the docs and demo
+          hosting, code signing for the desktop apps, and time to ship the roadmap.</strong> One-time
+          or monthly, every sponsor helps.
+        </p>
+        <div class="actions">
+          <a class="btn sponsor-btn" href={sponsor}><span aria-hidden="true">♥</span>&nbsp;Sponsor on GitHub</a>
+          <a class="btn" href={repo}>★&nbsp;Star the repository</a>
+        </div>
+      </section>
     </main>
 
     <footer class="foot">
       <p>
         <img src="/logo.svg" alt="" width="20" height="20" />
         Worklio is open source under the MIT License. © {year} Worklio contributors.
+        <a class="foot-sponsor" href={sponsor}>♥ Sponsor Worklio</a>
       </p>
       <p class="fine">Worklio is an independent project and is not affiliated with Slack Technologies or Salesforce.</p>
     </footer>

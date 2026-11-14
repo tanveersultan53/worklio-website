@@ -107,6 +107,22 @@ p {
   margin: -7px 0;
 }
 
+/* Sponsor: the one pink pill in the nav, so it's easy to find. */
+.nav nav .sponsor {
+  color: #fff;
+  background: var(--ask);
+  border: 1.5px solid var(--ask);
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin: -7px 0;
+  font-weight: 700;
+}
+.nav nav .sponsor:hover {
+  color: #fff;
+  background: #c92650;
+  border-color: #c92650;
+}
+
 /* ---------- Buttons ---------- */
 .actions {
   display: flex;
@@ -501,6 +517,47 @@ p {
   border-color: var(--ink);
 }
 
+/* ---------- Support ---------- */
+.support {
+  width: var(--wrap);
+  max-width: 760px;
+  margin: 0 auto 96px;
+  padding: 48px clamp(24px, 5vw, 56px);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgb(229 55 95 / 0.1), rgb(240 176 48 / 0.12));
+  border: 1.5px solid rgb(229 55 95 / 0.25);
+}
+.support h2 {
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+}
+.support > p {
+  margin-top: 14px;
+  color: var(--ink-soft);
+  font-size: 1.12rem;
+}
+.support strong {
+  color: var(--ink);
+}
+.btn.sponsor-btn {
+  background: var(--ask);
+  border-color: var(--ask);
+  color: #fff;
+  font-size: 1.05rem;
+}
+.btn.sponsor-btn:hover {
+  background: #c92650;
+  border-color: #c92650;
+}
+.foot-sponsor {
+  margin-left: 10px;
+  font-weight: 700;
+  color: var(--ask);
+  text-decoration: none;
+}
+.foot-sponsor:hover {
+  text-decoration: underline;
+}
+
 /* ---------- Footer ---------- */
 .foot {
   border-top: 1px solid var(--line);
@@ -542,7 +599,7 @@ p {
   }
 }
 @media (max-width: 560px) {
-  .nav nav a:not(.gh) {
+  .nav nav a:not(.gh):not(.sponsor) {
     display: none;
   }
   .channel {
