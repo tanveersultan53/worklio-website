@@ -18,6 +18,8 @@ const areas = [
     name: "Meet",
     title: "Calls that ring, huddles you drop into",
     body: "Ring a teammate or start a huddle in a channel. Share your screen and draw on it, take notes that land in the thread, raise a hand, and blur your background.",
+    img: "/screenshots/huddle.gif",
+    alt: "A huddle with three people switching the stage to the whiteboard and the launch board",
   },
   {
     key: "make",
@@ -161,17 +163,6 @@ const areas = [
               <div class="area-visual">
                 {a.img ? (
                   <img src={a.img} alt={a.alt} width="1920" height="1080" loading="lazy" />
-                ) : a.key === "meet" ? (
-                  <div class="huddle" role="img" aria-label="A huddle with three people and a shared whiteboard">
-                    <div class="tiles">
-                      <span class="tile" style="--h: 345">Maya</span>
-                      <span class="tile speaking" style="--h: 200">Leo</span>
-                      <span class="tile" style="--h: 40">Sara</span>
-                    </div>
-                    <div class="controls">
-                      <span>Mic</span><span>Camera</span><span>Share screen</span><span>Whiteboard</span><span class="leave">Leave</span>
-                    </div>
-                  </div>
                 ) : (
                   <div class="ask" role="img" aria-label="Ask Worklio answering a question with sources">
                     <p class="q">When are we launching?</p>

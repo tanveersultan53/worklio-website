@@ -403,51 +403,6 @@ p {
   box-shadow: 0 0 0 1px var(--line), 0 24px 48px -32px rgb(42 15 40 / 0.5);
 }
 
-/* Meet: a huddle mock. */
-.huddle {
-  background: #1d1b22;
-  border-radius: 16px;
-  padding: 18px;
-  display: grid;
-  gap: 14px;
-}
-.tiles {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-.tile {
-  aspect-ratio: 4 / 3;
-  border-radius: 12px;
-  background: linear-gradient(140deg, hsl(var(--h) 75% 70%), hsl(calc(var(--h) + 30) 70% 52%));
-  display: flex;
-  align-items: flex-end;
-  padding: 10px;
-  color: #fff;
-  font-weight: 700;
-  text-shadow: 0 1px 2px rgb(0 0 0 / 0.35);
-}
-.tile.speaking {
-  box-shadow: 0 0 0 3px var(--meet);
-}
-.controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-}
-.controls span {
-  background: rgb(255 255 255 / 0.1);
-  color: #fff;
-  border-radius: 999px;
-  padding: 7px 14px;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-.controls .leave {
-  background: var(--ask);
-}
-
 /* Ask: an AI answer mock. */
 .ask {
   border-radius: 16px;
@@ -595,9 +550,6 @@ p {
   }
   .channel-side {
     display: none;
-  }
-  .tiles {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
