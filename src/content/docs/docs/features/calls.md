@@ -9,6 +9,8 @@ Worklio uses [LiveKit](https://livekit.io/) for audio and video. It runs as part
 
 Start an audio or video call from a DM or a person's profile. The other person's Worklio **rings**, with an incoming-call window they can accept or decline. Missed, declined and cancelled calls leave a card in the conversation.
 
+![An incoming video call](/screenshots/incoming-call.webp)
+
 ## Huddles
 
 A huddle is a call that lives in a channel. Anyone in the channel can drop in.
@@ -26,3 +28,7 @@ A huddle is a call that lives in a channel. Anyone in the channel can drop in.
 - **Camera effects**: background blur and virtual backgrounds, with a camera check before you join.
 
 With Worklio AI turned on, a huddle can produce a **summary with action items**.
+
+![A huddle with emoji reactions](/screenshots/huddle.webp)
+
+![The whiteboard on stage in a call](/screenshots/huddle-whiteboard.webp)

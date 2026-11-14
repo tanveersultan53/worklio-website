@@ -25,3 +25,8 @@ kbd {
   border-bottom-width: 2px;
   border-radius: 5px;
 }
+
+/* Wider reading column for tables (configuration reference) and screenshots. */
+:root { --sl-content-width: 52rem; }
+pre.mermaid { background: transparent; border: 1px solid var(--sl-color-hairline); border-radius: 12px; padding: 1rem; text-align: center; }
+.screens { display: grid; gap: 2rem; }

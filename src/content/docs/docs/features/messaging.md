@@ -9,6 +9,10 @@ description: Channels, DMs, threads, reactions, polls, pins, scheduled messages 
 - **Direct messages** work one-to-one or with a small group.
 - **Threads** keep side conversations next to the message they're about. Follow threads from the **Threads** view.
 
+![A channel with reactions, a thread, a poll and a pinned message](/screenshots/channel.webp)
+
+![A thread open beside the channel](/screenshots/thread.webp)
+
 ## Writing messages
 
 - Formatting: `*bold*`, `_italic_`, `~strike~`, `` `code` ``, code blocks with syntax highlighting, quotes and links.
@@ -25,9 +29,15 @@ description: Channels, DMs, threads, reactions, polls, pins, scheduled messages 
 - Create a **poll** with single or multiple choice, anonymous if you like.
 - Links show a preview card, fetched safely by the server.
 
+![Message actions: save, pin, remind, forward and copy link](/screenshots/message-actions.webp)
+
+![Scheduling a message](/screenshots/schedule-send.webp)
+
 ## Slash commands
 
 Type `/` in the composer to see them all, including `/remind`, `/poll`, `/dnd`, `/mute`, `/status`, `/away`, `/topic`, `/invite`, `/leave`, `/shrug` and `/ai`.
+
+![The slash command menu](/screenshots/slash-commands.webp)
 
 ## Search
 
@@ -41,6 +51,8 @@ Press <kbd>⌘K</kbd> (or <kbd>Ctrl K</kbd>) and search. Narrow results with fil
 | `before:` / `after:` / `on:` | `after:2026-11-01` |
 | `is:thread` | messages in threads |
 | `"exact phrase"` | `"release notes"` |
+
+![Search with filters](/screenshots/search.webp)
 
 ## Long histories
 

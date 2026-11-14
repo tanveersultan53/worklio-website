@@ -6,7 +6,7 @@ description: Set up Worklio locally, run the checks and open a pull request.
 Thanks for helping. This guide covers setup, the checks we run, and what a good pull request
 looks like. By taking part you agree to follow the [Code of Conduct](https://github.com/tanveersultan53/worklio/blob/main/CODE_OF_CONDUCT.md). Roles
 (contributor, triager, maintainer) and how decisions are made are described in
-[GOVERNANCE.md](/docs/contributing/governance/).
+[Governance and roles](/docs/contributing/governance/).
 
 ## Ways to help
 
@@ -21,7 +21,7 @@ To pick an issue, comment on it to ask for it and a maintainer will assign it to
 one issue at a time. If an assigned issue has no activity for two weeks, it may be reassigned. For larger changes (new features, schema changes, new dependencies), open an issue
 or draft PR early.
 
-Security problems are the exception: never open a public issue. Follow [SECURITY.md](/docs/self-hosting/security/).
+Security problems are the exception: never open a public issue. Follow [Security](/docs/self-hosting/security/).
 
 ## Development setup
 
@@ -76,7 +76,7 @@ You don't need write access. The usual flow:
    Use a [Conventional Commits](https://www.conventionalcommits.org/) style title.
 
 `main` is protected by a ruleset: nobody, maintainers included, can push to it directly, force
-push or delete it. See [GOVERNANCE.md](/docs/contributing/governance/#how-changes-reach-main) for the full rules.
+push or delete it. See [Governance and roles](/docs/contributing/governance/#how-changes-reach-main) for the full rules.
 
 A DCO sign-off is not required. By submitting a contribution you agree that it is licensed under
 the project's [MIT License](https://github.com/tanveersultan53/worklio/blob/main/LICENSE).

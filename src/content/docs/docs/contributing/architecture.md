@@ -5,19 +5,19 @@ description: How Worklio's services, realtime layer and data model fit together.
 
 Worklio is a modular monolith: one FastAPI application, one Next.js web app, and a few supporting
 services. This page explains how the pieces fit together. For settings see
-[CONFIGURATION.md](/docs/self-hosting/configuration/); for pitfalls see [LESSONS_LEARNED.md](/docs/contributing/lessons-learned/).
+[Configuration](/docs/self-hosting/configuration/); for pitfalls see [Lessons learned](/docs/contributing/lessons-learned/).
 
 ## System overview
 
-```mermaid
+<pre class="mermaid">
 flowchart LR
   subgraph Browser
     Web[Next.js web app]
   end
-  Web -- HTTPS REST + SSE --> API
-  Web -- one WebSocket /ws --> API
-  Web -- presigned GET --> S3[(S3 / SeaweedFS)]
-  Web -- WebRTC --> LK[LiveKit server]
+  Web -- HTTPS REST + SSE --&gt; API
+  Web -- one WebSocket /ws --&gt; API
+  Web -- presigned GET --&gt; S3[(S3 / SeaweedFS)]
+  Web -- WebRTC --&gt; LK[LiveKit server]
 
   subgraph Backend
     API[FastAPI API processes]
@@ -25,18 +25,18 @@ flowchart LR
     Beat[Celery beat]
   end
 
-  API -- SQL --> PG[(Postgres 17 + pgvector)]
-  API -- pub/sub, presence, rate limits --> Redis[(Redis)]
-  API -- upload / delete --> S3
-  API -- tasks --> Redis
-  Beat -- schedules --> Redis
-  Redis -- tasks --> Worker
-  Worker -- SQL --> PG
-  Worker -- publish events --> Redis
-  API -- AI requests --> AI[Claude / Gemini / DeepSeek]
-  Worker -- AI requests --> AI
-  API -. signs LiveKit tokens .-> Web
-```
+  API -- SQL --&gt; PG[(Postgres 17 + pgvector)]
+  API -- pub/sub, presence, rate limits --&gt; Redis[(Redis)]
+  API -- upload / delete --&gt; S3
+  API -- tasks --&gt; Redis
+  Beat -- schedules --&gt; Redis
+  Redis -- tasks --&gt; Worker
+  Worker -- SQL --&gt; PG
+  Worker -- publish events --&gt; Redis
+  API -- AI requests --&gt; AI[Claude / Gemini / DeepSeek]
+  Worker -- AI requests --&gt; AI
+  API -. signs LiveKit tokens .-&gt; Web
+</pre>
 
 | Service | Role |
 |---|---|
@@ -123,7 +123,7 @@ revoked (for example the member was deactivated).
 **Missed events.** If an API process loses its Redis subscription, it sends `resync` to its
 sockets when it reconnects. The client also emits `resync` to itself after its own reconnect.
 Consumers refetch the latest page of whatever they show. Older gaps are not filled yet (see
-"Pagination v2" in [ROADMAP.md](/docs/contributing/roadmap/)).
+"Pagination v2" in [Roadmap](/docs/contributing/roadmap/)).
 
 ## Data model overview
 

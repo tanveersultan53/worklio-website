@@ -19,6 +19,12 @@ export default defineConfig({
         { tag: "link", attrs: { rel: "preconnect", href: "https://fonts.googleapis.com" } },
         { tag: "link", attrs: { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: true } },
         {
+          tag: "script",
+          attrs: { type: "module" },
+          content:
+            'const pres = document.querySelectorAll("pre.mermaid"); if (pres.length) { const { default: mermaid } = await import("https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs"); const dark = document.documentElement.dataset.theme === "dark"; mermaid.initialize({ startOnLoad: false, theme: dark ? "dark" : "neutral", fontFamily: "Instrument Sans, system-ui, sans-serif" }); await mermaid.run({ nodes: pres }); }',
+        },
+        {
           tag: "link",
           attrs: {
             rel: "stylesheet",
@@ -32,6 +38,7 @@ export default defineConfig({
           items: [
             { label: "Introduction", slug: "docs" },
             { label: "Quick start", slug: "docs/quick-start" },
+            { label: "Screenshots", slug: "docs/screenshots" },
           ],
         },
         {

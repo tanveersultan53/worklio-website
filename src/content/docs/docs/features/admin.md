@@ -18,13 +18,19 @@ Workspace owners and admins manage Worklio from **Workspace settings** (the gear
 
 Change roles, **deactivate** someone (they can't sign in to the workspace; their messages stay), reactivate them, or remove them.
 
+![Members](/screenshots/settings-members.webp)
+
 ## Invitations
 
 Create **invite links** that join people as members or guests, with an expiry and a maximum number of uses. Revoke a link at any time. People who already have an account can also be added by email.
 
+![Invitations](/screenshots/settings-invitations.webp)
+
 ## Permissions
 
 Decide who can create public and private channels, invite people, use AI and more. Permissions are enforced on the server, not just hidden in the interface.
+
+![Permissions](/screenshots/settings-permissions.webp)
 
 ## Workspace settings
 
@@ -33,3 +39,5 @@ Name, icon, description, workspace URL (generated from the name when the workspa
 ## Audit log
 
 Every sensitive change (roles, access, settings, invitations, AI and apps) is recorded with who did it and when. API keys are never logged.
+
+![Audit log](/screenshots/settings-audit-log.webp)

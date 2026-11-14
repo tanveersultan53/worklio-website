@@ -20,7 +20,7 @@ and how decisions are made.
 ### Users and contributors
 
 You don't need permission to contribute. Fork the repository, make your change on a branch, and
-open a pull request. Read [CONTRIBUTING.md](/docs/contributing/) first; it covers setup, checks and the
+open a pull request. Read [How to contribute](/docs/contributing/) first; it covers setup, checks and the
 pull request checklist. The pinned [Roadmap issue](https://github.com/tanveersultan53/worklio/issues/24)
 lists work that is ready to pick up.
 
@@ -87,7 +87,7 @@ Release tags (`v*`) can only be created, moved or deleted by admins.
 ## Code of Conduct and security
 
 Everyone in the project follows the [Code of Conduct](https://github.com/tanveersultan53/worklio/blob/main/CODE_OF_CONDUCT.md). Security
-vulnerabilities are reported privately as described in [SECURITY.md](/docs/self-hosting/security/), never in public
+vulnerabilities are reported privately as described in [Security](/docs/self-hosting/security/), never in public
 issues.
 
 ## Changes to this document

@@ -9,6 +9,8 @@ Worklio AI is built in and **permission-aware**: it looks things up through the 
 
 AI is off until an admin adds a provider key. Open **Workspace settings → AI**, choose **Anthropic**, **Gemini** or **DeepSeek**, paste your key and use **Test connection**. Keys are encrypted at rest and never shown again. Admins can turn individual features on or off and see usage.
 
+![AI settings](/screenshots/settings-ai.webp)
+
 ## What it does
 
 - **Ask Worklio** (<kbd>⌘J</kbd>): ask a question about your workspace and get an answer with links to the messages it used.
@@ -18,6 +20,8 @@ AI is off until an admin adds a provider key. Open **Workspace settings → AI**
 - **Turn a thread into tasks** for your board or to-do list.
 - **Huddle summaries** with decisions and action items.
 - **@worklio in a channel**: add the Worklio app to a channel, then mention it to ask questions, summarise or create reminders and cards.
+
+![The Ask Worklio panel](/screenshots/ask-worklio.webp)
 
 ## Privacy
 

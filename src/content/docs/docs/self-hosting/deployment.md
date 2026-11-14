@@ -79,4 +79,4 @@ The API runs uvicorn with `--proxy-headers`, so rate limits see real client IPs 
   out through Redis), so you can run more `api` containers behind the proxy.
 - **Logs:** `docker compose -f docker-compose.prod.yml logs -f api worker beat`.
 
-See [SECURITY.md](/docs/self-hosting/security/) for the full hardening checklist.
+See [Security](/docs/self-hosting/security/) for the full hardening checklist.

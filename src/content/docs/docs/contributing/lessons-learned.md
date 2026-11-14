@@ -144,7 +144,7 @@ involved.
   which is separate for each origin.
 - **Fix:** open `http://localhost:3000` and `http://127.0.0.1:3000` side by side and sign in as a
   different user in each. Add both to `CORS_ORIGINS` and the second host to `NEXT_DEV_ALLOWED_ORIGINS`.
-  See [CONTRIBUTING.md](/docs/contributing/#testing-with-two-accounts-in-one-browser).
+  See [How to contribute](/docs/contributing/#testing-with-two-accounts-in-one-browser).
 
 ## Working with AI coding agents
 
