@@ -1,0 +1,27 @@
+/* Worklio brand for the Starlight docs. Accent = Worklio green (the app's primary action). */
+:root {
+  --sl-font: "Instrument Sans", system-ui, sans-serif;
+  --sl-font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --sl-color-accent-low: #0b3b2e;
+  --sl-color-accent: #19a37f;
+  --sl-color-accent-high: #c9f2e5;
+}
+:root[data-theme="light"] {
+  --sl-color-accent-low: #d4f1e7;
+  --sl-color-accent: #007a5a;
+  --sl-color-accent-high: #00452f;
+}
+h1, h2, h3, .site-title {
+  font-family: "Bricolage Grotesque", var(--sl-font);
+  letter-spacing: -0.015em;
+}
+.site-title { font-weight: 800; }
+.sl-markdown-content img { border-radius: 12px; border: 1px solid var(--sl-color-hairline); }
+kbd {
+  font-family: var(--sl-font-mono);
+  font-size: 0.8em;
+  padding: 0.1em 0.4em;
+  border: 1px solid var(--sl-color-hairline-light);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+}

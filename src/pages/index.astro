@@ -1,0 +1,234 @@
+---
+import "../styles/site.css";
+
+const repo = "https://github.com/tanveersultan53/worklio";
+const year = new Date().getFullYear();
+
+const areas = [
+  {
+    key: "talk",
+    name: "Talk",
+    title: "Conversations that stay organised",
+    body: "Channels, DMs and threads, with reactions, polls, pins, bookmarks and scheduled messages. Search with filters like from:, in: and has:, and jump to any message, however old.",
+    img: "/screenshots/thread.webp",
+    alt: "A thread open next to the #general channel",
+  },
+  {
+    key: "meet",
+    name: "Meet",
+    title: "Calls that ring, huddles you drop into",
+    body: "Ring a teammate or start a huddle in a channel. Share your screen and draw on it, take notes that land in the thread, raise a hand, and blur your background.",
+  },
+  {
+    key: "make",
+    name: "Make",
+    title: "Docs, whiteboards and boards beside the chat",
+    body: "Every channel has a canvas the team writes together, a shared whiteboard, and a board with priorities, labels, due dates and a table view.",
+    img: "/screenshots/board.webp",
+    alt: "A launch board with To do, In progress and Done columns",
+  },
+  {
+    key: "ask",
+    name: "Ask",
+    title: "AI that only sees what you can see",
+    body: "Ask questions about your workspace and get answers with sources, catch up on busy channels, and turn threads into tasks. Bring your own Anthropic, Gemini or DeepSeek key.",
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Worklio: open-source team chat you host yourself</title>
+    <meta
+      name="description"
+      content="Worklio is open-source team chat with threads, calls and huddles, shared docs, boards and permission-aware AI. Run it on your own servers. MIT licensed."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;600&display=swap"
+    />
+    <meta property="og:title" content="Worklio: open-source team chat you host yourself" />
+    <meta property="og:description" content="Threads, calls, shared docs, boards and permission-aware AI. MIT licensed." />
+    <meta property="og:image" content="/screenshots/channel.webp" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="nav">
+      <a class="brand" href="/" aria-label="Worklio home">
+        <img src="/logo.svg" alt="" width="32" height="32" />
+        <span>Worklio</span>
+      </a>
+      <nav aria-label="Main">
+        <a href="/docs/">Docs</a>
+        <a href="/docs/self-hosting/deployment/">Self-hosting</a>
+        <a href="/docs/contributing/">Contribute</a>
+        <a class="gh" href={repo}>GitHub</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero-copy">
+          <h1>Team chat that lives on your servers.</h1>
+          <p class="lede">
+            Worklio is open-source team chat with threads, calls, shared docs, boards and AI that
+            respects permissions. Run it yourself in minutes. MIT licensed.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="/docs/quick-start/">Self-host Worklio</a>
+            <a class="btn" href={repo}>View on GitHub</a>
+          </div>
+        </div>
+
+        <figure class="channel" aria-label="An example Worklio channel">
+          <div class="channel-side" aria-hidden="true">
+            <img src="/logo.svg" alt="" width="28" height="28" />
+            <span class="side-item active"># general</span>
+            <span class="side-item"># launch <i class="live">huddle</i></span>
+            <span class="side-item"># design</span>
+            <span class="side-item muted">Leo Okafor</span>
+          </div>
+          <div class="channel-main">
+            <div class="channel-head"><strong># general</strong><span>Company-wide announcements</span></div>
+            <ol class="msgs">
+              <li class="msg" style="--i: 0">
+                <span class="av" style="--h: 345">MC</span>
+                <div>
+                  <p class="who">Maya Chen <time>9:02</time></p>
+                  <p>We moved the whole team to Worklio this morning 🎉 Chat, calls and docs now run on our own servers.</p>
+                  <p class="reacts"><span>🎉 4</span><span>🙌 2</span></p>
+                </div>
+              </li>
+              <li class="msg" style="--i: 1">
+                <span class="av" style="--h: 200">LO</span>
+                <div>
+                  <p class="who">Leo Okafor <time>9:05</time></p>
+                  <p>Setup was one <code>make up</code>. Huddle in #launch at 3?</p>
+                  <p class="thread-link">2 replies</p>
+                </div>
+              </li>
+              <li class="msg" style="--i: 2">
+                <span class="av" style="--h: 40">SL</span>
+                <div>
+                  <p class="who">Sara Lindqvist <time>9:11</time></p>
+                  <p>The launch plan canvas is up, and the board is right next to it in #launch.</p>
+                </div>
+              </li>
+              <li class="msg bot" style="--i: 3">
+                <img class="av bot-av" src="/logo.svg" alt="" width="32" height="32" />
+                <div>
+                  <p class="who">Worklio <span class="app">App</span> <time>9:12</time></p>
+                  <p>Catch-up for today: launch moves to Thursday, the offsite is in Lisbon, and onboarding shipped.</p>
+                  <p class="sources">Sources: #launch, #general</p>
+                </div>
+              </li>
+            </ol>
+            <div class="composer" aria-hidden="true">Message #general</div>
+          </div>
+        </figure>
+      </section>
+
+      <section class="walkthrough" aria-labelledby="walkthrough-title">
+        <h2 id="walkthrough-title">See it in action</h2>
+        <p>Reply in a thread, open the launch board, switch to dark mode. This is the real app.</p>
+        <div class="window">
+          <img
+            src="/screenshots/walkthrough.gif"
+            alt="Worklio walkthrough: replying in a thread, opening the launch board and switching to dark mode"
+            width="1280"
+            height="720"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <section class="areas" aria-label="What Worklio does">
+        {
+          areas.map((a) => (
+            <article class={`area area-${a.key}`}>
+              <div class="area-copy">
+                <p class="area-name">{a.name}</p>
+                <h2>{a.title}</h2>
+                <p>{a.body}</p>
+              </div>
+              <div class="area-visual">
+                {a.img ? (
+                  <img src={a.img} alt={a.alt} width="1920" height="1080" loading="lazy" />
+                ) : a.key === "meet" ? (
+                  <div class="huddle" role="img" aria-label="A huddle with three people and a shared whiteboard">
+                    <div class="tiles">
+                      <span class="tile" style="--h: 345">Maya</span>
+                      <span class="tile speaking" style="--h: 200">Leo</span>
+                      <span class="tile" style="--h: 40">Sara</span>
+                    </div>
+                    <div class="controls">
+                      <span>Mic</span><span>Camera</span><span>Share screen</span><span>Whiteboard</span><span class="leave">Leave</span>
+                    </div>
+                  </div>
+                ) : (
+                  <div class="ask" role="img" aria-label="Ask Worklio answering a question with sources">
+                    <p class="q">When are we launching?</p>
+                    <p class="a">Thursday at 9:00. Leo moved it from Wednesday after QA, and Priya confirmed the press preview for Wednesday.</p>
+                    <p class="cite">From #launch and a thread in #general. Only messages you can read are used.</p>
+                  </div>
+                )}
+              </div>
+            </article>
+          ))
+        }
+      </section>
+
+      <section class="selfhost" aria-labelledby="selfhost-title">
+        <div class="selfhost-copy">
+          <h2 id="selfhost-title">Up and running in three steps</h2>
+          <ol class="steps">
+            <li><strong>Clone the repository</strong> and copy the example settings.</li>
+            <li><strong>Start the stack</strong> with one command: database, storage, workers and calls.</li>
+            <li><strong>Open the app</strong>, create your workspace and invite your team.</li>
+          </ol>
+          <a class="btn primary" href="/docs/quick-start/">Read the quick start</a>
+        </div>
+        <pre class="terminal" aria-label="Commands to run Worklio"><code><span class="c"># 1</span>
+git clone https://github.com/tanveersultan53/worklio.git
+cd worklio && cp .env.example .env
+
+<span class="c"># 2</span>
+make up
+
+<span class="c"># 3</span>
+cd frontend && npm install && npm run dev
+<span class="c"># open http://localhost:3000</span></code></pre>
+      </section>
+
+      <section class="open" aria-labelledby="open-title">
+        <h2 id="open-title">Open source, built in the open</h2>
+        <p>
+          Worklio is MIT licensed. Read every line, run it anywhere, and change it to fit your team.
+          New contributors are welcome: pick a good first issue, follow the contributing guide, and
+          open a pull request.
+        </p>
+        <ul class="links">
+          <li><a href={`${repo}/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22`}>Good first issues</a></li>
+          <li><a href={`${repo}/issues/24`}>Roadmap</a></li>
+          <li><a href="/docs/contributing/">Contributing guide</a></li>
+          <li><a href="/docs/contributing/governance/">Governance</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>
+        <img src="/logo.svg" alt="" width="20" height="20" />
+        Worklio is open source under the MIT License. © {year} Worklio contributors.
+      </p>
+      <p class="fine">Worklio is an independent project and is not affiliated with Slack Technologies or Salesforce.</p>
+    </footer>
+  </body>
+</html>
